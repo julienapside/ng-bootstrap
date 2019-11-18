@@ -12,6 +12,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {WorkoutsApiService} from './services/workouts-api.service';
 import {NgxLoadingModule} from 'ngx-loading';
 import {FormsModule} from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [

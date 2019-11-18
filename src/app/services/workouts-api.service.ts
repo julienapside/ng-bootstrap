@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class WorkoutsApiService {
 
-  private baseUrl = 'http://localhost/4000';
+  private baseUrl = 'http://localhost:4000';
 
   constructor(private http: HttpClient) { }
 
@@ -15,7 +15,7 @@ export class WorkoutsApiService {
   }
 
   getWorkout(id){
-    return this.http.get<any>(`${this.baseUrl}/wourkouts/${id}`);
+    return this.http.get<any>(`${this.baseUrl}/workouts/${id}`);
   }
 
   addWorkout(workout: any){

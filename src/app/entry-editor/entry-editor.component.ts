@@ -28,7 +28,7 @@ export class EntryEditorComponent implements OnInit {
     });
   }
 
-  save(){
+  save() {
     this.loading = true;
     this.api.saveWorkout(this.workout).subscribe(data => {
       this.loading = false;
