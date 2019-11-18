@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {WorkoutsApiService} from '../services/workouts-api.service';
 
 @Component({
   selector: 'app-workouts',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkoutsComponent implements OnInit {
 
-  constructor() { }
+  public workouts = [];
+  public loading = false;
+
+  constructor(private api: WorkoutsApiService) { }
 
   ngOnInit() {
+    this.loading = true;
+    this.api.getWorkouts().subscribe(data => {
+      this.workouts = data;
+      this.loading = false;
+    });
   }
+
+  // deleteWorkout(id) {
+  //  this.api.deleteWorkout(id).subscribe(data => _.remove(this.workouts, { id: id }));
+  // }
 
 }

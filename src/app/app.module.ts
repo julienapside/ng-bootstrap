@@ -8,6 +8,10 @@ import { EntryEditorComponent } from './entry-editor/entry-editor.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { RouterModule } from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
+import {HttpClientModule} from '@angular/common/http';
+import {WorkoutsApiService} from './services/workouts-api.service';
+import {NgxLoadingModule} from 'ngx-loading';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,9 +24,14 @@ import {AppRoutingModule} from './app-routing.module';
   imports: [
     BrowserModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    NgxLoadingModule.forRoot({}),
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    WorkoutsApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
