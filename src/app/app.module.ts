@@ -2,13 +2,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { WorkoutsComponent } from './workouts/workouts.component';
+import { EntryEditorComponent } from './entry-editor/entry-editor.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { RouterModule } from '@angular/router';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    WorkoutsComponent,
+    EntryEditorComponent,
+    NavMenuComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
