@@ -22,42 +22,15 @@
               <label ngbButtonLabel class="btn-primary"><input ngbButton type="radio" value="row">Raw</label>
             </div>
 
-            <!--
-            <div class="btn-group btn-group-toggle" name="wtype" ngbRadioGroup [(ngModel)]="workout.type">
-              <label ngbButtonLabel class="btn-primary"><input ngbButton type="radio" value="bike">Bike</label>
-              <label ngbButtonLabel class="btn-primary"><input ngbButton type="radio" value="run">Run</label>
-              <label ngbButtonLabel class="btn-primary"><input ngbButton type="radio" value="row">Row</label>
-            </div>
-             -->
-<!--
-            <button class="btn btn-outline-info btn-sm ml-sm-2" [popoverTitle]="popTitle"
-                    [ngbPopover]="popContent" placement="right" popoverClass="custom-popover"
-                    triggers="mouseenter:mouseleave" #pop="ngbPopover"
-                    (shown)="popVisibilityChanged(pop)" (hidden)="popVisibilityChanged(pop)">?</button>
-            <ng-template #popTitle>
-              <h4>Activity Type</h4>
-            </ng-template>
-            <ng-template #popContent>
-              These buttons specify the type of <strong class="text-primary text-uppercase">activity</strong>
-            </ng-template>
-            -->
           </div>
         </div>
 
         <div class="form-group row">
           <label class="col-form-label col-sm-2">Date:</label>
           <div class="col-sm-3">
+            <ngb-datepicker #d name="wdate" [(ngModel)]="workout.date"></ngb-datepicker>
+            <!--
              <input type="text" class="form-control" name="wdate" [(ngModel)]="workout.date" />
-            <!-- <ngb-datepicker #d name="wdate" [(ngModel)]="workout.date"
-                [startDate]="startDate" [maxDate]="maxDate"></ngb-datepicker>
-
-            <div class="input-group">
-              <input class="form-control" placeholder="yyyy-mm-dd" name="wdate" [(ngModel)]="workout.date" [maxDate]="maxDate"
-                     ngbDatepicker #d="ngbDatepicker">
-              <div class="input-group-append">
-                <button class="btn btn-info calendar" (click)="d.toggle()" type="button"></button>
-              </div>
-            </div>
             -->
           </div>
         </div>
@@ -84,13 +57,6 @@
             -->
           </div>
         </div>
-
-        <div class="form-group row">
-              <label class="col-form-label col-sm-2">Date:</label>
-              <div class="col-sm-3">
-                <input type="text" class="form-control" name="wdate" [(ngModel)]="workout.date" />
-              </div>
-            </div>
 
         <div class="form-group row">
           <label class="col-form-label col-sm-2">Distance:</label>

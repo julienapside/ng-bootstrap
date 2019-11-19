@@ -12,7 +12,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {WorkoutsApiService} from './services/workouts-api.service';
 import {NgxLoadingModule} from 'ngx-loading';
 import {FormsModule} from '@angular/forms';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDateAdapter, NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {DateStringAdapterService} from './services/date-string-adapter.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     NgbModule.forRoot()
   ],
   providers: [
-    WorkoutsApiService
+    WorkoutsApiService,
+    {provide: NgbDateAdapter, useClass: DateStringAdapterService}
   ],
   bootstrap: [AppComponent]
 })
