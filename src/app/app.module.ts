@@ -28,7 +28,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     HttpClientModule,
     NgxLoadingModule.forRoot({}),
-    FormsModule
+    FormsModule,
+    NgbModule.forRoot()
   ],
   providers: [
     WorkoutsApiService
